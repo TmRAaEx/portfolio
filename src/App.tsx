@@ -1,3 +1,5 @@
+import ContactIcon from "./components/ContactIcon.tsx";
+
 function App() {
 
 
@@ -9,9 +11,9 @@ function App() {
                         <p className="text-white  text-6xl/17 font-bold font-header">Alexander Hirsch</p>
                         <p className="text-white  text-4xl/10 font-bold font-text">Fullstack utvecklare</p>
                         <div className={"flex flex-row gap-3"}>
-                            <a className="text-white" href={"https://github.com/TmRAaEx?tab=repositories"}>Github</a>
-                            <a className="text-white" href={"https://www.linkedin.com/in/alexander-hirsch-b125342a1/"}>Linked
-                                in</a>
+                            <ContactIcon link={"https://github.com/TmRAaEx?tab=repositories"} icon={"/icons/github.svg"}/>
+                            <ContactIcon link={"https://linkedin.com/in/alexander-hirsch-b125342a1/"} icon={"/icons/linkedin.svg"}/>
+
                         </div>
                     </div>
                     <p className={"text-white"}>
