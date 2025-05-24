@@ -40,7 +40,16 @@ export const projects: Project[] = [
         git_link: "https://github.com/TmRAaEx/ecommerce-api",
         description: "Grupparbete: Använd och bygg ut färdigställt API efter behov"
     },
-
+    {
+        name: "Goal Trackr",
+        link: "https://goaltrakr.vercel.app/dashboard/goals?q=1",
+        image: "goaltrackr",
+        priority: 1,
+        deployed: true,
+        skills: [{name: "TypeScript"}, {name: "NextJS"}, {name: "PostgreSQL"}, {name: "CSS"}],
+        git_link: "https://github.com/TmRAaEx/goaltrakr",
+        description: "Task tracking app med syfte att hjälpa mig hålla reda på mina mål och olika uppgifter/tasks. OBS: Databasen ligger nere",
+    },
     {
         name: "File Router",
         link: "https://www.npmjs.com/package/@tmraaex/simpleframework",
