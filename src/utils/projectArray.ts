@@ -48,7 +48,7 @@ export const projects: Project[] = [
         deployed: true,
         skills: [{name: "TypeScript"}, {name: "NextJS"}, {name: "PostgreSQL"}, {name: "CSS"}],
         git_link: "https://github.com/TmRAaEx/goaltrakr",
-        description: "Task tracking app med syfte att hjälpa mig hålla reda på mina mål och olika uppgifter/tasks. OBS: Databasen ligger nere",
+        description: "Task tracking app med syfte att hjälpa mig hålla reda på mina mål och olika uppgifter/tasks.",
     },
     {
         name: "File Router",
