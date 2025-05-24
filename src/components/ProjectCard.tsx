@@ -3,10 +3,10 @@ import type Project from "../interfaces/Project.ts";
 export default function ProjectCard({project}: { project: Project }) {
     return (
         <li id={"projectCard" + project.priority}
-            className="flex flex-col items-center md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
+            className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
             {/* Bildsektion */}
             <img src={`/projectimages/${project.image}.png`} alt={project.name}
-                 className="w-full md:w-4/10 h-fit rounded-md object-scale-down"/>
+                 className="w-full md:w-1/3 h-auto rounded-md object-cover"/>
 
             {/* Textsektion */}
             <div className="flex flex-col justify-between flex-1">
