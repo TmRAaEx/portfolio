@@ -31,14 +31,14 @@ export const projects: Project[] = [
         description: "Grupparbete: Bygga en E-handel med ett färdigt api, som kunde byggas ut efter behov."
     },
     {
-        name: "Custom Router",
+        name: "File Router",
         link: "https://www.npmjs.com/package/@tmraaex/simpleframework",
         image: "npm",
         priority: 4,
         deployed: false,
         skills: [{name: "TypeScript"}, {name: "React"}, {name: "npm"}],
         git_link: "",
-        description: "NPM paket som skapar routes baserat på filstruktur i react(vite). WIP"
+        description: "Pågående skapande av ett NPM paket som skapar routes baserat på filstruktur i react-router. WIP"
     },
     {
         name: "Portfolio",
@@ -48,6 +48,6 @@ export const projects: Project[] = [
         deployed: false,
         skills: [{name: "TypeScript"}, {name: "React"}, {name: "tailwindcss"}],
         git_link: "https://github.com/TmRAaEx/portfolio",
-        description: "Portfolio för fullstack utveckling"
+        description: "Portfolio för fullstack utveckling."
     }
 ]
