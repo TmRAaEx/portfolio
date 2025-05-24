@@ -16,8 +16,8 @@ export const projects: Project[] = [
         image: "e-commerce-api",
         priority: 1,
         deployed: true,
-        skills: [{name: "TypeScript"}, {name: "NodeJS"}, {name: "Express"}],
-        git_link: "https://github.com/TmRAaEx/ecomerce-api-vercel",
+        skills: [{name: "TypeScript"}, {name: "NodeJS"}, {name: "Express"}, {name: "MySQL"}],
+        git_link: "https://github.com/TmRAaEx/e-commerce-api-vercel",
         description: "Skapa ett API för en e-handel, integrera med stripe och google sök."
     },
     {
@@ -26,10 +26,21 @@ export const projects: Project[] = [
         image: "viktorshop",
         priority: 3,
         deployed: true,
-        skills: [{name: "TypeScript"}, {name: "React"}],
+        skills: [{name: "JavaScript"}, {name: "React"}],
         git_link: "https://github.com/E-commerce-ViktorsShop/ecommerce-client",
         description: "Grupparbete: Bygga en E-handel med ett färdigt api, som kunde byggas ut efter behov."
     },
+    {
+        name: "Viktorshop API",
+        link: "https://ecommerce-client-clone.vercel.app/",
+        image: "viktorshop",
+        priority: 3,
+        deployed: true,
+        skills: [{name: "JavaScript"}, {name: "MongoDB"},{name: "NodeJS"}, {name: "Express"}],
+        git_link: "https://github.com/TmRAaEx/ecommerce-api",
+        description: "Grupparbete: Använd och bygg ut färdigställt API efter behov"
+    },
+
     {
         name: "File Router",
         link: "https://www.npmjs.com/package/@tmraaex/simpleframework",
@@ -49,5 +60,15 @@ export const projects: Project[] = [
         skills: [{name: "TypeScript"}, {name: "React"}, {name: "tailwindcss"}],
         git_link: "https://github.com/TmRAaEx/portfolio",
         description: "Portfolio för fullstack utveckling."
+    },
+    {
+        name: "Nyhetsbrevs app",
+        link: "",
+        image: "newsletters",
+        priority: 2,
+        deployed: false,
+        skills: [{name: "PHP"}, {name: "CodeIgniter4"}, {name: "CSS"}, {name: "MySQL"}],
+        git_link: "https://github.com/TmRAaEx/php-newsletter-app",
+        description: "Nyhetsbrevs app i php som stödjer lösenords återställning via mejl länk."
     }
 ]
