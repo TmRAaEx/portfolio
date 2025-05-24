@@ -11,8 +11,8 @@ export default function ProjectCard({
                                         priority
                                     }: Project) {
     return (
-        <div id={"projectCard" + priority}
-             className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
+        <li id={"projectCard" + priority}
+            className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
             {/* Bildsektion */}
             <img src={`/projectimages/${image}.png`} alt={name}
                  className="w-full md:w-1/3 h-auto rounded-md object-cover"/>
@@ -66,6 +66,6 @@ export default function ProjectCard({
                         )}
                 </div>
             </div>
-        </div>
+        </li>
     );
 }
