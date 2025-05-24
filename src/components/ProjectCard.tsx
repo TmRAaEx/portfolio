@@ -1,11 +1,21 @@
 import type Project from "../interfaces/Project.ts";
 
-export default function ProjectCard({name, link, image, deployed, skills, git_link, description}: Project) {
+export default function ProjectCard({
+                                        name,
+                                        link,
+                                        image,
+                                        deployed,
+                                        skills,
+                                        git_link,
+                                        description,
+                                        priority
+                                    }: Project) {
     return (
-        <div
-            className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
+        <div id={"projectCard" + priority}
+             className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
             {/* Bildsektion */}
-            <img src={image} alt={name} className="w-full md:w-1/3 h-auto rounded-md object-cover"/>
+            <img src={`/projectimages/${image}.png`} alt={name}
+                 className="w-full md:w-1/3 h-auto rounded-md object-cover"/>
 
             {/* Textsektion */}
             <div className="flex flex-col justify-between flex-1">
@@ -35,13 +45,25 @@ export default function ProjectCard({name, link, image, deployed, skills, git_li
                             Demo
                         </a>
                     )}
-                    <a href={git_link} target="_blank">
-                        <img
-                            src="/icons/github.svg"
-                            alt="GitHub"
-                            className="w-6 h-6 hover:opacity-80 transition"
-                        />
-                    </a>
+                    {!deployed && link && (
+                        <a
+                            href={link}
+                            target="_blank"
+                            className="text-blue-400 underline hover:text-blue-300 transition"
+                        >
+                            Se mer
+                        </a>
+                    )}
+                    {
+                        git_link && (
+                            <a href={git_link} target="_blank">
+                                <img
+                                    src="/icons/github.svg"
+                                    alt="GitHub"
+                                    className="w-6 h-6 hover:opacity-80 transition"
+                                />
+                            </a>
+                        )}
                 </div>
             </div>
         </div>

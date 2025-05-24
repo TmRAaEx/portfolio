@@ -2,9 +2,9 @@ export default interface Project {
     name: string;
     link: string;
     image: string;
-    priority?: number;
+    priority: number;
     deployed: boolean;
-    skills: [{ name: string }]
+    skills: { name: string }[]
     git_link: string;
     description: string;
 }
