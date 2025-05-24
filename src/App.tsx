@@ -43,7 +43,7 @@ function App() {
 
     return (
         <>
-            <main className={"flex flex-col items-center mt-40 font-text"}>
+            <main className={"flex flex-col items-center mt-40 font-text px-1"}>
                 <div className="w-full max-w-[900px] flex flex-col p-3 gap-16">
                     <div>
                         <p className="text-white text-6xl/17 font-bold font-header">Alexander Hirsch</p>
