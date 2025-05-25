@@ -3,15 +3,26 @@ import Skills from "@/app/components/Skills";
 import Projects from "@/app/components/Projects";
 import {getProjects} from "@/lib/projects";
 import Locale from "@/interfaces/Locale";
+import {redirect} from "next/navigation";
 
 interface Params {
     params: Promise<Locale>;
 }
 
+export async function generateStaticParams() {
+    return [{locale: "sv"}, {locale: "en"}];
+}
+
+
 export const revalidate = 3600;
 
 export default async function Page({params}: Params) {
     const {locale} = await params;
+
+    if (locale !== "sv" && locale !== "en") {
+        redirect("/sv")
+    }
+
     const projects = await getProjects();
 
     return (

@@ -1,4 +1,9 @@
-export default function IconLink({link, company}: { link: string, company: string }) {
+import Locale from "@/interfaces/Locale";
+import sv from "@/lib/locales/sv"
+import en from "@/lib/locales/en"
+
+export default function IconLink({link, company, locale}: { link: string, company: string, locale: Locale["locale"] }) {
+    const texts = {sv, en}
     return (
         <>
             <a
@@ -18,7 +23,7 @@ export default function IconLink({link, company}: { link: string, company: strin
                      whitespace-nowrap
                      pointer-events-none
                      z-10">
-      Visa på {company}
+                    {texts[locale].tooltips[company]}
     </span>
             </a>
         </>

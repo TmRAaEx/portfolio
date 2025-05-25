@@ -42,11 +42,11 @@ export default function ProjectCard({project, locale}: { project: Project, local
 
                     )}
                     {project.npm_link && (
-                        <IconLink link={project.npm_link} company={"NPM"}/>
+                        <IconLink link={project.npm_link} locale={locale} company={"npm"}/>
                     )}
 
                     {project.git_link && (
-                        <IconLink link={project.git_link} company={"GitHub"}/>
+                        <IconLink link={project.git_link} locale={locale} company={"github"}/>
                     )}
                 </div>
             </div>
