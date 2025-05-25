@@ -1,11 +1,3 @@
-import {skills} from "../utils/skillsArray.ts";
-
-
-type Skill = typeof skills[number];
-
-type SkillObject = {
-    name: Skill
-}
 
 export default interface Project {
     name: string;
@@ -13,7 +5,7 @@ export default interface Project {
     image: string;
     priority: number;
     deployed: boolean;
-    skills: SkillObject[]
+    skills: {name: string}[]
     git_link: string;
     description: string;
 }
