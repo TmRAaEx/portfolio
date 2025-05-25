@@ -36,13 +36,16 @@ export default function ProjectCard({project}: { project: Project }) {
                             Demo
                         </a>
                     )}
-                    {!project.deployed && project.link && (
+                    {project.npm_link && (
                         <a
-                            href={project.link}
+                            href={project.npm_link}
                             target="_blank"
-                            className="text-blue-400 underline hover:text-blue-300 transition"
                         >
-                            Se mer
+                            <img
+                                src="/icons/npm.svg"
+                                alt="NPM"
+                                className="w-12 h-12 hover:opacity-80 transition"
+                            />
                         </a>
                     )}
                     {
