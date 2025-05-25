@@ -8,7 +8,6 @@ export default async function Home() {
 
     const projects = await getProjects();
 
-    console.log(projects)
     return (
         <main className={"flex flex-col items-center mt-40 font-text px-1"}>
             <article className="w-full max-w-[900px] flex flex-col p-3 gap-16">
