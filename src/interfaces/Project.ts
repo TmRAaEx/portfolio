@@ -9,5 +9,8 @@ export default interface Project {
     deployed: boolean;
     skills: string[]
     git_link: string;
-    description: string;
+    description: {
+        "en": string;
+        "sv": string;
+    };
 }

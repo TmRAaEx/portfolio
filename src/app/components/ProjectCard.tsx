@@ -1,7 +1,8 @@
 import Project from "@/interfaces/Project";
 import IconLink from "@/app/components/IconLink";
+import Locale from "@/interfaces/Locale";
 
-export default function ProjectCard({project}: { project: Project }) {
+export default function ProjectCard({project, locale}: { project: Project, locale: Locale["locale"] }) {
     return (
         <li id={"projectCard" + project.priority}
             className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
@@ -13,7 +14,7 @@ export default function ProjectCard({project}: { project: Project }) {
             <div className="flex flex-col justify-between flex-1">
                 <div>
                     <h3 className="text-3xl font-subheader mb-2 capitalize">{project.name}</h3>
-                    <p className={"text-md/4 my-2"}>{project.description}</p>
+                    <p className={"text-md/4 my-2"}>{project.description[locale]}</p>
 
                     <ul className="flex flex-wrap gap-2 mb-4">
                         {project.skills.map((skill) => (
