@@ -3,7 +3,7 @@ import Skills from "@/app/components/Skills";
 import Projects from "@/app/components/Projects";
 import {getProjects} from "@/lib/projects";
 
-
+export const revalidate = 3600;
 export default async function Home() {
 
     const projects = await getProjects();
