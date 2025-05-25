@@ -1,5 +1,5 @@
-import ContactIcon from "./ContactIcon.tsx";
-import Text from "./Text.tsx";
+import ContactIcon from "@/app/components/ContactIcon";
+import Text from "./Text"
 
 export default function Introduction() {
 

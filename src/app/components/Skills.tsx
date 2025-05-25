@@ -1,6 +1,7 @@
-import Subheader from "./Subheader.tsx";
-import {skills} from "../utils/skillsArray.ts";
-import Skill from "./Skill.tsx";
+import Subheader from "@/app/components/Subheader";
+import {skills} from "@/utils/skillsArray";
+import Skill from "@/app/components/Skill";
+
 
 export default function Skills() {
     return (
@@ -8,7 +9,7 @@ export default function Skills() {
             <Subheader>Färdigheter</Subheader>
             <ul className={"text-white"}>
                 {skills.map((skill) => {
-                    return <Skill name={skill}/>
+                    return <Skill key={skill} name={skill}/>
                 })}
             </ul>
         </section>

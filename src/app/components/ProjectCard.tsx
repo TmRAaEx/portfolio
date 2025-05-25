@@ -1,4 +1,5 @@
-import type Project from "../interfaces/Project.ts";
+import Project from "@/interfaces/Project";
+import IconLink from "@/app/components/IconLink";
 
 export default function ProjectCard({project}: { project: Project }) {
     return (
@@ -34,58 +35,18 @@ export default function ProjectCard({project}: { project: Project }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-blue-400 underline hover:text-blue-300 transition"
                         >
-                            Demo
+                            <p>Demo</p>
                             <img src="/icons/link.svg" width={16} height={16} alt="Extern länk"/>
                         </a>
 
                     )}
                     {project.npm_link && (
-                        <a
-                            href={project.npm_link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative group inline-block"
-                        >
-                            <img
-                                src="/icons/npm.svg"
-                                alt="NPM"
-                                className="w-8 h-8 hover:opacity-80 transition"
-                            />
-                            <span className="absolute top-1/2 left-full ml-2 -translate-y-1/2
-                     hidden group-hover:block
-                     bg-gray-800 text-white text-xs rounded py-1 px-2
-                     whitespace-nowrap
-                     pointer-events-none
-                     z-10">
-      Visa på npm
-    </span>
-                        </a>
+                        <IconLink link={project.npm_link} company={"NPM"}/>
                     )}
 
                     {project.git_link && (
-                        <a
-                            href={project.git_link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative group inline-block"
-                        >
-                            <img
-                                src="/icons/github.svg"
-                                alt="GitHub"
-                                className="w-6 h-6 hover:opacity-80 transition"
-                            />
-                            <span className="absolute top-1/2 left-full ml-2 -translate-y-1/2
-                     hidden group-hover:block
-                     bg-gray-800 text-white text-xs rounded py-1 px-2
-                     whitespace-nowrap
-                     pointer-events-none
-                     z-10">
-      Visa på GitHub
-    </span>
-                        </a>
+                        <IconLink link={project.git_link} company={"GitHub"}/>
                     )}
-
-
                 </div>
             </div>
         </li>

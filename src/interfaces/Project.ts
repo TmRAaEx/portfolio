@@ -1,5 +1,6 @@
 
 export default interface Project {
+    _id: string;
     name: string;
     link: string;
     npm_link?: string;
