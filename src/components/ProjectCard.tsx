@@ -17,10 +17,10 @@ export default function ProjectCard({project}: { project: Project }) {
                     <ul className="flex flex-wrap gap-2 mb-4">
                         {project.skills.map((skill) => (
                             <li
-                                key={skill.name}
+                                key={skill}
                                 className="bg-white/10 px-3 py-1 rounded-full text-sm"
                             >
-                                {skill.name}
+                                {skill}
                             </li>
                         ))}
                     </ul>

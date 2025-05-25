@@ -5,7 +5,7 @@ export default interface Project {
     image: string;
     priority: number;
     deployed: boolean;
-    skills: {name: string}[]
+    skills: string[]
     git_link: string;
     description: string;
 }
