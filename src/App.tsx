@@ -1,8 +1,21 @@
 import Introduction from "./components/Introduction.tsx";
 import Skills from "./components/Skills.tsx";
 import Projects from "./components/Projects.tsx";
+import {useEffect, useState} from "react";
+import type Project from "./interfaces/Project.ts";
 
 function App() {
+
+    const fetchProjects = async () => {
+        const response = await fetch("/api/projects")
+        return await response.json();
+    }
+
+    const [projects, setProjects] = useState<Project[]>([]);
+
+    useEffect(() => {
+        fetchProjects().then((projects) => setProjects(projects));
+    }, []);
 
     return (
         <>
@@ -15,7 +28,7 @@ function App() {
                     <Skills/>
 
                     {/* -- Lista med projekt --*/}
-                    <Projects/>
+                    <Projects projects={projects}/>
                 </article>
             </main>
         </>

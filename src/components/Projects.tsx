@@ -1,8 +1,10 @@
 import Subheader from "./Subheader.tsx";
-import {projects} from "../utils/projectArray.ts";
 import ProjectCard from "./ProjectCard.tsx";
+import type Project from "../interfaces/Project.ts";
 
-export default function Projects() {
+export default function Projects({projects}: { projects: Project[] }) {
+
+    console.log(projects);
     return (
         <section id={"projects"} className={"text-white "}>
             <Subheader>Projekt</Subheader>
