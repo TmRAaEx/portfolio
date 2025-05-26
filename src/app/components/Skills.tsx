@@ -1,17 +1,14 @@
 import Subheader from "@/app/components/Subheader";
 import {skills} from "@/utils/skillsArray";
 import Skill from "@/app/components/Skill";
-import Locale from "@/interfaces/Locale";
-import sv from "@/lib/locales/sv"
-import en from "@/lib/locales/en"
+import {Translations} from "@/interfaces/Locale";
 
-export default function Skills({locale}: Locale) {
+export default function Skills({texts}: { texts: Translations }) {
 
-    const texts = {sv, en}
 
     return (
         <section id={"skills"}>
-            <Subheader>{texts[locale].titles.skills}</Subheader>
+            <Subheader>{texts.titles.skills}</Subheader>
             <ul className={"text-white"}>
                 {skills.map((skill) => {
                     return <Skill key={skill} name={skill}/>
