@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexander-hirsch.se/sitemap.xml
+Sitemap: https://www.alexander-hirsch.se/sitemap-0.xml
