@@ -5,7 +5,9 @@ const en: Translations = {
     titles: {
         skills: "Skills",
         projects: "Projects",
-        contact: "Contact"
+        contact: "Contact",
+        navigation: "Navigation",
+        email: "Email me"
     },
 
     descriptions: {
@@ -15,7 +17,13 @@ const en: Translations = {
     tooltips: {
         github: "View on GitHub",
         npm: "View on NPM"
-    }
+    },
+
+    links: {
+        github: "https://github.com/TmRAaEx",
+        linkedin: "https://linkedin.com/in/alexander-hirsch-b125342a1/?locale=en_US"
+    },
+    copyright: "All rights reserved.",
 }
 
 export default en

@@ -38,7 +38,7 @@ export default async function Page({params}: { params: Promise<Locale> }) {
                 <Projects projects={projects} locale={locale} texts={texts}/>
 
 
-                <Footer/>
+                <Footer texts={texts}/>
             </article>
         </main>
     );

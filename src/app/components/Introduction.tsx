@@ -11,8 +11,8 @@ export default function Introduction({texts}: { texts: Translations }) {
                 <p className=" text-4xl/10  font-subheader">{texts.work_role}</p>
             </div>
             <div className={"flex flex-row gap-3"}>
-                <ContactIcon link={"https://github.com/TmRAaEx?tab=repositories"}/>
-                <ContactIcon link={"https://linkedin.com/in/alexander-hirsch-b125342a1/"}/>
+                <ContactIcon link={`${texts.links["github"]}tab=repositories`}/>
+                <ContactIcon link={texts.links["linkedin"]}/>
             </div>
         </header>
 
