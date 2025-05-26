@@ -5,7 +5,9 @@ let cachedClient: MongoClient | null = null;
 
 const connection_uri = process.env.MONGODB_URI!
 
-
+/**
+ * Fetches my projects from my mongoDB Atlas DB
+ * */
 export async function getProjects(): Promise<Project[]> {
     if (!cachedClient) {
         cachedClient = new MongoClient(connection_uri);

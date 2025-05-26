@@ -5,6 +5,7 @@ import {getProjects} from "@/lib/projects";
 import {redirect} from "next/navigation";
 import {getTexts} from "@/lib/locales/getTexts";
 import Locale from "@/interfaces/Locale";
+import Footer from "@/app/components/Footer";
 
 export async function generateStaticParams() {
     return [{locale: "sv"}, {locale: "en"}];
@@ -35,6 +36,9 @@ export default async function Page({params}: { params: Promise<Locale> }) {
 
                 {/* -- Lista med projekt --*/}
                 <Projects projects={projects} locale={locale} texts={texts}/>
+
+
+                <Footer/>
             </article>
         </main>
     );
