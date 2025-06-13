@@ -12,6 +12,13 @@
     --font-text: "Fragment Mono", monospace;
 }
 
+.text {
+    @apply text-white text-xl/7 lg:text-2xl/8;
+}
+
+.card {
+    @apply flex flex-col md:flex-row bg-white/3 text-white w-full p-4 border border-gray-700 rounded-xl gap-4
+}
 
 html, body {
     margin: 0;

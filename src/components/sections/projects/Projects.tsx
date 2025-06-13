@@ -1,6 +1,6 @@
-import Subheader from "@/app/components/Subheader";
+import Subheader from "@/components/styled/Subheader";
 import Project from "@/interfaces/Project";
-import ProjectCard from "@/app/components/ProjectCard";
+import ProjectCard from "@/components/sections/projects/ProjectCard";
 import Locale, {Translations} from "@/interfaces/Locale";
 
 

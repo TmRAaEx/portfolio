@@ -1,13 +1,13 @@
-import Project from "@/interfaces/Project";
-import IconLink from "@/app/components/IconLink";
-import Locale from "@/interfaces/Locale";
 import Image from "next/image";
 import Link from "next/link";
+import Project from "@/interfaces/Project";
+import Locale from "@/interfaces/Locale";
+import IconLink from "@/components/sections/projects/IconLink";
 
 export default function ProjectCard({project, locale}: { project: Project, locale: Locale["locale"] }) {
     return (
         <li id={"projectCard" + project.priority}
-            className="flex flex-col md:flex-row bg-white/3 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
+            className="card">
             {/* Bildsektion */}
             <Image src={`/projectimages/${project.image}.png`} alt={project.name}
                    className="w-full md:w-1/3 h-auto rounded-md object-cover"

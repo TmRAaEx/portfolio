@@ -1,6 +1,6 @@
-import Subheader from "@/app/components/Subheader";
+import Subheader from "@/components/styled/Subheader";
 import {skills} from "@/utils/skillsArray";
-import Skill from "@/app/components/Skill";
+import Skill from "@/components/sections/skills/Skill";
 import {Translations} from "@/interfaces/Locale";
 
 export default function Skills({texts}: { texts: Translations }) {

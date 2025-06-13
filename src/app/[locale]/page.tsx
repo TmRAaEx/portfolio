@@ -1,11 +1,11 @@
-import Introduction from "@/app/components/Introduction";
-import Skills from "@/app/components/Skills";
-import Projects from "@/app/components/Projects";
+import Introduction from "@/components/sections/Introduction";
+import Skills from "@/components/sections/skills/Skills";
+import Projects from "@/components/sections/projects/Projects";
 import {getProjects} from "@/lib/projects";
 import {redirect} from "next/navigation";
 import {getTexts} from "@/lib/locales/getTexts";
 import Locale from "@/interfaces/Locale";
-import Footer from "@/app/components/Footer";
+import Footer from "@/components/sections/Footer";
 
 export async function generateStaticParams() {
     return [{locale: "sv"}, {locale: "en"}];

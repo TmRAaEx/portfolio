@@ -1,5 +1,5 @@
-import ContactIcon from "@/app/components/ContactIcon";
-import Text from "./Text"
+import ContactIcon from "@/components/styled/ContactIcon";
+import Text from "@/components/styled/Text"
 import {Translations} from "@/interfaces/Locale";
 
 
