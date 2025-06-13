@@ -1,14 +1,19 @@
 import Project from "@/interfaces/Project";
 import IconLink from "@/app/components/IconLink";
 import Locale from "@/interfaces/Locale";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectCard({project, locale}: { project: Project, locale: Locale["locale"] }) {
     return (
         <li id={"projectCard" + project.priority}
-            className="flex flex-col md:flex-row bg-white/5 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
+            className="flex flex-col md:flex-row bg-white/3 text-white w-full p-4 border border-gray-700 rounded-xl gap-4">
             {/* Bildsektion */}
-            <img src={`/projectimages/${project.image}.png`} alt={project.name}
-                 className="w-full md:w-1/3 h-auto rounded-md object-cover"/>
+            <Image src={`/projectimages/${project.image}.png`} alt={project.name}
+                   className="w-full md:w-1/3 h-auto rounded-md object-cover"
+                   width={600}
+                   height={200}
+            />
 
             {/* Textsektion */}
             <div className="flex flex-col justify-between flex-1">
@@ -30,15 +35,15 @@ export default function ProjectCard({project, locale}: { project: Project, local
 
                 <div className="flex items-center gap-4 mt-2">
                     {project.deployed && (
-                        <a
+                        <Link
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-blue-400 underline hover:text-blue-300 transition"
                         >
                             <p>Demo</p>
-                            <img src="/icons/link.svg" width={16} height={16} alt="Extern länk"/>
-                        </a>
+                            <Image src="/icons/link.svg" width={16} height={16} alt="Extern länk"/>
+                        </Link>
 
                     )}
                     {project.npm_link && (
