@@ -1,7 +1,7 @@
-import {Translations} from "@/interfaces/Locale";
+import { Translations } from "@/interfaces/Locale";
 
 const sv: Translations = {
-    work_role: "Fullstack Utvecklare",
+    work_role: "Fullstackutvecklare",
     titles: {
         skills: "Färdigheter",
         projects: "Projekt",
@@ -10,14 +10,13 @@ const sv: Translations = {
         email: "Mejla mig"
     },
 
-
     descriptions: {
-        intro: "Blivande fullstackutvecklare med ett starkt intresse för kreativ problemlösning, med fokus på ren kod, responsiva applikationer och min egen utveckling.",
+        intro: "Blivande fullstackutvecklare med ett starkt intresse för kreativ problemlösning, med fokus på ren kod, responsiva webbapplikationer och kontinuerlig personlig utveckling.",
     },
 
     tooltips: {
         github: "Visa på GitHub",
-        npm: "Visa på NPM"
+        npm: "Visa på npm"
     },
 
     links: {
@@ -26,4 +25,5 @@ const sv: Translations = {
     },
     copyright: "Alla rättigheter förbehållna."
 }
+
 export default sv
