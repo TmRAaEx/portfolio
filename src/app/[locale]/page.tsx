@@ -39,7 +39,7 @@ export default async function Page({params}: { params: Promise<Locale> }) {
 
 
                 <Footer texts={texts}/>
-            </article>
+            </article> 
         </main>
     );
 }
