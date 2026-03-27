@@ -12,15 +12,7 @@ export async function getProjects(): Promise<Project[]> {
     .toArray();
 
   return rawProjects.map((doc) => ({
+    ...doc,
     _id: doc._id.toString(),
-    name: doc.name,
-    link: doc.link,
-    npm_link: doc.npm_link,
-    image: doc.image,
-    priority: doc.priority,
-    deployed: doc.deployed,
-    skills: doc.skills,
-    git_link: doc.git_link,
-    description: doc.description,
-  }));
+  })) as unknown as Project[];
 }

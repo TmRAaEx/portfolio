@@ -5,6 +5,7 @@ const en: Translations = {
   titles: {
     skills: 'Skills',
     projects: 'Projects',
+    featured: 'Featured Projects',
     contact: 'Contact',
     navigation: 'Navigation',
     email: 'Email me',

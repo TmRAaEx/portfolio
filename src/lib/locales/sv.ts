@@ -5,6 +5,7 @@ const sv: Translations = {
   titles: {
     skills: 'Färdigheter',
     projects: 'Projekt',
+    featured: 'Utvalda Projekt',
     contact: 'Kontakt',
     navigation: 'Navigering',
     email: 'Mejla mig',

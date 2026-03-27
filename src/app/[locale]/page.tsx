@@ -11,7 +11,7 @@ export async function generateStaticParams() {
     return [{locale: "sv"}, {locale: "en"}];
 }
 
-export const revalidate = 3600;
+// export const revalidate = 3600;
 
 export default async function Page({params}: { params: Promise<Locale> }) {
     const {locale} = await params;

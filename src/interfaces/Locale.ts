@@ -7,6 +7,7 @@ export type Translations = {
     titles: {
         skills: string;
         projects: string;
+        featured: string;
         contact: string;
         navigation: string;
         email: string;

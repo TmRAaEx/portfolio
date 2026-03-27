@@ -20,6 +20,15 @@
     @apply flex flex-col md:flex-row bg-white/3 text-white w-full p-4 border border-gray-700 rounded-xl gap-4
 }
 
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 html, body {
     margin: 0;
     padding: 0;

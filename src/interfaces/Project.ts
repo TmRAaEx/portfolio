@@ -6,6 +6,7 @@ export default interface Project {
     npm_link?: string;
     image: string;
     priority: number;
+    featured?: boolean;
     deployed: boolean;
     skills: string[]
     git_link: string;
