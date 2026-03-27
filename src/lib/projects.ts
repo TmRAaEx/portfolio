@@ -1,32 +1,26 @@
-import {MongoClient} from "mongodb";
+// lib/getProjects.ts
+import clientPromise from "./mongodb";
 import type Project from "@/interfaces/Project";
 
-let cachedClient: MongoClient | null = null;
-
-const connection_uri = process.env.MONGODB_URI!
-
-/**
- * Fetches my projects from my mongoDB Atlas DB
- * */
 export async function getProjects(): Promise<Project[]> {
-    if (!cachedClient) {
-        cachedClient = new MongoClient(connection_uri);
-        await cachedClient.connect();
-    }
+  const client = await clientPromise;
+  const db = client.db("portfolio");
 
-    const db = cachedClient.db("portfolio");
-    const rawProjects = await db.collection("Projects").find().toArray();
+  const rawProjects = await db.collection("Projects")
+    .find()
+    .sort({ priority: 1 }) // valfritt, men nice
+    .toArray();
 
-    return rawProjects.map((doc) => ({
-        _id: doc._id.toString(),
-        name: doc.name,
-        link: doc.link,
-        npm_link: doc.npm_link,
-        image: doc.image,
-        priority: doc.priority,
-        deployed: doc.deployed,
-        skills: doc.skills,
-        git_link: doc.git_link,
-        description: doc.description,
-    }));
+  return rawProjects.map((doc) => ({
+    _id: doc._id.toString(),
+    name: doc.name,
+    link: doc.link,
+    npm_link: doc.npm_link,
+    image: doc.image,
+    priority: doc.priority,
+    deployed: doc.deployed,
+    skills: doc.skills,
+    git_link: doc.git_link,
+    description: doc.description,
+  }));
 }

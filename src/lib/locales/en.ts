@@ -1,4 +1,4 @@
-import {Translations} from "@/interfaces/Locale";
+import { Translations } from "@/interfaces/Locale";
 
 const en: Translations = {
     work_role: "Fullstack Developer",
@@ -11,12 +11,12 @@ const en: Translations = {
     },
 
     descriptions: {
-        intro: "Aspiring fullstack developer with a strong passion for creative problem-solving, focusing on clean code, responsive applications, and my own growth.",
+        intro: "Aspiring fullstack developer with a strong passion for creative problem solving, focusing on clean code, responsive applications, and continuous personal growth.",
     },
 
     tooltips: {
         github: "View on GitHub",
-        npm: "View on NPM"
+        npm: "View on npm"
     },
 
     links: {
